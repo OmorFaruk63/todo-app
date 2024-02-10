@@ -1,0 +1,94 @@
+/* TodoList.css */
+.todo-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.todo-list-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.todo-list-container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* TodoItem.css */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item .status {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-item .status.completed {
+  color: green;
+}
+
+.todo-item .edit-input {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.todo-item .edit-btn,
+.todo-item .delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #007bff;
+}
+
+.todo-item .edit-btn:hover,
+.todo-item .delete-btn:hover {
+  color: #0056b3;
+}
+
+/* TodoForm.css */
+.todo-form {
+  margin-bottom: 20px;
+}
+
+.task-input {
+  width: calc(100% - 80px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
