@@ -35,6 +35,25 @@
   padding: 10px 0;
 }
 
+.priority {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.Normal {
+  background-color: #33ff00;
+}
+
+.Medium {
+  background-color: #ffb800;
+}
+
+.High {
+  background-color: #ff0000;
+}
+
 .todo-item:last-child {
   border-bottom: none;
 }
@@ -101,6 +120,7 @@
 
 /* TodoForm.css */
 .todo-form {
+  position: relative;
   display: flex;
   margin-bottom: 20px;
 }
@@ -114,6 +134,13 @@
   border-radius: 5px;
 }
 
+.radio {
+  top: 9px;
+  right: 83px;
+  position: absolute;
+  display: flex;
+  font-size: small;
+}
 .add-btn {
   padding: 10px 20px;
   font-size: 16px;
@@ -126,4 +153,14 @@
 
 .add-btn:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 550px) {
+  .radio {
+    top: 40px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+    font-size: small;
+  }
 }

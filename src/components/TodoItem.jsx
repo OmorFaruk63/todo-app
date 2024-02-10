@@ -17,7 +17,7 @@ const TodoItem = ({ task, editTask, toggleComplete, deleteTask }) => {
       setEditing(false);
     }
   };
-
+  console.log(task.priority);
   return (
     <li className="todo-item">
       {editing ? (
@@ -43,6 +43,7 @@ const TodoItem = ({ task, editTask, toggleComplete, deleteTask }) => {
           <span className={task.completed ? "isCompleted" : ""}>
             {task.text}
           </span>
+          <span className={`priority ${task.priority}`}></span>
           <button onClick={() => setEditing(true)} className="edit-btn">
             <MdEditDocument className="icon" />
           </button>
