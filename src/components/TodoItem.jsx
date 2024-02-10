@@ -21,14 +21,14 @@ const TodoItem = ({ task, editTask, toggleComplete, deleteTask }) => {
   return (
     <li className="todo-item">
       {editing ? (
-        <form onSubmit={handleEditSubmit}>
+        <form className="edit-form" onSubmit={handleEditSubmit}>
           <input
             type="text"
             value={editedText}
             onChange={handleEditChange}
             className="edit-input"
           />
-          <button type="submit" className="edit-btn">
+          <button type="submit" className="edit-btn save">
             Save
           </button>
         </form>
