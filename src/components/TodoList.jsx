@@ -1,19 +1,12 @@
 import { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm.jsx";
-import "./TodoList.css";
 
 const TodoList = () => {
-  const [tasks, setTasks] = useState([]);
+  const storedTasks = JSON.parse(localStorage.getItem("tasks"));
+  const [tasks, setTasks] = useState(storedTasks || []);
   const [totalTasks, setTotalTasks] = useState(0);
   const [completedTasks, setCompletedTasks] = useState(0);
-
-  useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem("tasks"));
-    if (storedTasks) {
-      setTasks(storedTasks);
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));

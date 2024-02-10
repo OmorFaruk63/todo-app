@@ -1,7 +1,7 @@
 /* TodoList.css */
 .todo-list-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -52,27 +52,40 @@
   font-size: 16px;
 }
 
+.isCompleted {
+  text-decoration: line-through;
+}
+
 .todo-item .edit-btn,
 .todo-item .delete-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 14px;
-  color: #007bff;
 }
 
-.todo-item .edit-btn:hover,
-.todo-item .delete-btn:hover {
-  color: #0056b3;
+.edit-btn {
+  margin-left: auto;
+}
+
+.icon {
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(47, 47, 47);
+}
+
+.icon:hover {
+  color: rgb(255, 0, 0);
 }
 
 /* TodoForm.css */
 .todo-form {
+  display: flex;
   margin-bottom: 20px;
 }
 
 .task-input {
-  width: calc(100% - 80px);
+  width: 85%;
+  margin-right: 10px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;

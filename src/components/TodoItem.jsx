@@ -1,6 +1,6 @@
-// TodoItem.js
-import React, { useState } from "react";
-import "./TodoItem.css";
+import { useState } from "react";
+import { MdDelete } from "react-icons/md";
+import { MdEditDocument } from "react-icons/md";
 
 const TodoItem = ({ task, editTask, toggleComplete, deleteTask }) => {
   const [editing, setEditing] = useState(false);
@@ -40,12 +40,14 @@ const TodoItem = ({ task, editTask, toggleComplete, deleteTask }) => {
           >
             {task.completed ? "☑" : "☐"}
           </span>
-          <span>{task.text}</span>
+          <span className={task.completed ? "isCompleted" : ""}>
+            {task.text}
+          </span>
           <button onClick={() => setEditing(true)} className="edit-btn">
-            Edit
+            <MdEditDocument className="icon" />
           </button>
           <button onClick={() => deleteTask(task.id)} className="delete-btn">
-            Delete
+            <MdDelete className="icon" />
           </button>
         </>
       )}
